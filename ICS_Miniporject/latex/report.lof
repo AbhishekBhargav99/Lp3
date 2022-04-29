@@ -1,0 +1,12 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Line plots: Date vs Close Price (Raw Data)\relax }}{6}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Normal Distribution\relax }}{13}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid Decision\relax }}{14}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Random Forest Ensemble\relax }}{15}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Hyperplanes in 2D and 3D feature space\relax }}{16}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Predicting Movement with Trend Indicators.\relax }}{18}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Pair plots of trend indicators for NSEI\relax }}{19}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Naive Bayes: Line plot for NSEI\relax }}{20}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Logistic Regression: Line plot for NSEI\relax }}{21}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Random Forest Classifier: Line plot for NSEI\relax }}{22}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces SVM: Line plot for NSEI\relax }}{23}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Neural Network: Line plot for NSEI\relax }}{24}{figure.12}%

