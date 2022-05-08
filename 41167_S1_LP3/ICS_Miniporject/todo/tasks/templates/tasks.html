@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tasks</title>
+    </head>
+    <body>
+        {% autoescape off %}
+        <!-- <ul style="list-style-type: none;"> -->
+        <br>
+        <h2> &nbsp; List of group tasks : </h2>
+        <div class="left" style="float: left; width: 25%;">
+        .</div>
+        <div class="container" style="float: left; width: 50%;">
+            <br><br>
+            {% for t in tasks %}
+                {% if t.complete %}
+                <div style="margin-top: 5px; background-color: lightgreen; padding: 3px;">
+                    {#% autoescape off %#}
+                    {{ t.name|safe }}
+                    {#% endautoescape %#}
+                    <form style="float: right;" action="/delete" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="taskname" value={{ t.name }}>
+                        <button style="color: red;" type="submit"> x </button>
+                    </form>
+                    <form style="float: right;" method="POST" action="/complete">
+                        {% csrf_token %}
+                        <input type="hidden" name="taskname" value={{ t.name }}>
+                        <button style="color: green;" type="submit"> ✓ </button>
+                    </form>
+                </div>
+                {% else %}
+                <div style="margin-top: 5px; background-color: pink; padding: 3px;">
+                    {{ t.name }}
+                    <form style="float: right;" action="/delete" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="taskname" value={{ t.name }}>
+                        <button style="color: red;" type="submit"> x </button>
+                    </form>
+                    <form style="float: right;" method="POST" action="/complete">
+                        {% csrf_token %}
+                        <input type="hidden" name="taskname" value={{ t.name }}>
+                        <button style="color: green;" type="submit"> ✓ </button>
+                    </form>
+                </div>
+                {% endif %}
+            <!-- <li class="list-group-item"> {{ t.name }} <span class="badge">3</span></li> -->
+            {% endfor %}
+            {% endautoescape %}
+        <!-- </ul> -->
+        <br>
+        <form style="float: left;" class="form" action="/new" method="get">
+            {% csrf_token %}
+            <input type="text" name="taskname" style="height: 20px; font-size: 16px;" placeholder="New Task">
+            <button type="submit" name="submit" style="background-color: lightblue; padding: 5px; border: 0px;"> + </button>
+        </form>
+        <form style="float: left; margin-left: 20px;" action="/deleteall" method="post">
+            {% csrf_token %}
+            <button type="submit" style="background-color: red; padding: 5px; border: 0px;"> Delete All </button>
+        </form>
+        </div>
+    </body>
+</html>
